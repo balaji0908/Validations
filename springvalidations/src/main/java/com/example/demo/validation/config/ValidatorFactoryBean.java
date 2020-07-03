@@ -15,6 +15,7 @@ public class ValidatorFactoryBean /*implements MapperFactory*/ {
 	@Bean
 	public ConstraintMapping getHibernateConstraintMapping() {
 		HibernateValidatorConfiguration configuration = Validation.byProvider(HibernateValidator.class).configure();
+		System.out.println("Ye Master wala hai sysout");
 		return configuration.createConstraintMapping();
 	}
 
